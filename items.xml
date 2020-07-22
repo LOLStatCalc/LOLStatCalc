@@ -1,0 +1,2568 @@
+<!--Accounting for unique passives and other effects?
+
+Chalice of Harmony
+UNIQUE – HARMONY: Gain +25% base health regeneration for every additional 25% base mana regeneration.
+
+Forbidden Idol
+UNIQUE: +10% cooldown reduction
+
+Glacial Shroud
+UNIQUE: +10% cooldown reduction
+
+Kindlegem
+UNIQUE: +10% cooldown reduction
+
+Lost Chapter
+UNIQUE – HASTE: Grants an additional 10% cooldown reduction.
+
+Stinger
+UNIQUE: +10% cooldown reduction
+
+Zeal
+UNIQUE: +7% movement speed
+
+Archangel's Staff
+UNIQUE – HASTE: Grants an additional 10% cooldown reduction.
+UNIQUE – AWE: Grants bonus ability power equal to 1% maximum mana.
+
+Ardent Censer
+UNIQUE: +8% movement speed
+
+Athene's Unholy Grail
+UNIQUE – DISSONANCE: Gain +5 ability power for every additional 25% base mana regeneration. Disables HARMONY on your other items.
+
+Bloodthirster
+UNIQUE: +20% life steal
+
+Boots of Mobility
+Increases to +115 flat movement speed when out-of-combat. Receiving damage, dealing damage or debuffing units will put you in-combat, disabling this passive for 5 seconds.
+
+Youmuu's Ghostblade
+Youmuu's Wraithblade
+UNIQUE: +40 movement speed out-of-combat.
+
+Cinderhulk
+Increases health by 15% bonus health.
+
+Essence Reaver
+UNIQUE: +20% cooldown reduction
+
+Hextech GLP-800
+UNIQUE – HASTE: Grants an additional 10% cooldown reduction.
+
+Ionian Boots of Lucidity
+UNIQUE: +10% cooldown reduction
+
+Luden's Echo
+Luden's Pulse
+UNIQUE – HASTE: Grants an additional 10% cooldown reduction.
+
+Manamune
+UNIQUE – AWE: Grants bonus attack damage equal to 2% maximum mana.
+
+Mikael's Crucible
+UNIQUE – HARMONY: Gain +25% base health regeneration for every additional 25% base mana regeneration.
+
+Muramana
+UNIQUE – AWE: Grants bonus attack damage equal to 2% maximum mana.
+
+Nashor's Tooth
+UNIQUE: +20% cooldown reduction
+
+Rabadon's Deathcap
+Rabadon's Deathcrown
+UNIQUE: +40% ability power.
+
+Seraph's Embrace
+UNIQUE – HASTE: Grants an additional 10% cooldown reduction.
+UNIQUE – AWE: Grants bonus ability power equal to 3% maximum mana
+
+Spirit Visage
+UNIQUE: Increases all healing received by 30% (including health regeneration, life steal and spell vamp).
+
+Sterak's Gage
+UNIQUE – GIANT STRENGTH: Gain 50% of base attack damage as bonus attack damage.
+
+All boots
+UNIQUE – ENHANCED MOVEMENT: +n flat movement speed-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<items>
+	<!--Begin starter items-->
+	<item name="Cull">
+		<ad>10</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Doran's Blade">
+		<ad>8</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>.03</ls>
+		<hp>80</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Doran's Ring">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>60</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>15</ap>
+		<mp>0</mp>
+		<mp5>5</mp5><!--Flat mana regen-->
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Doran's Shield">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>80</hp>
+		<hp5>6</hp5><!--Flat health regen-->
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<!--End starter items-->
+	<!--Begin distributed items-->
+	<!--Viktor's item; scales with level; 1AP/10MP per level; ie. 18AP/180MP at level 18-->
+	<item name="Prototype Hex Core">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>1</ap>
+		<mp>10</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Slightly Magical Boots">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>35</ms></item>
+	<!--End distributed items-->
+	<!--Begin basic items-->
+	<item name="Amplifying Tome">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>20</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="B. F. Sword">
+		<ad>40</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Blasting Wand">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>40</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Boots of Speed">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>25</ms></item>
+	<item name="Cloak of Agility">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>.2</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Cloth Armor">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>15</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Dagger">
+		<ad>0</ad>
+		<as>.12</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Dark Seal">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>10</ap>
+		<mp>100</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Dark Seal (Max)">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>40</ap>
+		<mp>100</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Faerie Charm">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>.25</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Long Sword">
+		<ad>10</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Needlessly Large Rod">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>60</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Null-Magic Mantle">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>25</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Pickaxe">
+		<ad>25</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Rejuvenation Bead">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>.5</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Relic Shield">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>30</hp>
+		<hp5>.25</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>5</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Ruby Crystal">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>150</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Sapphire Crystal">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>250</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Spectral Sickle">
+		<ad>5</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>10</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>.25</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Spellthief's Edge">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>10</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>8</ap>
+		<mp>0</mp>
+		<mp5>.5</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Steel Shoulderguards">
+		<ad>3</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>30</hp>
+		<hp5>.25</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<!--End basic items-->
+	<!--Begin advanced items-->
+	<item name="Aegis of the Legion">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>30</arm>
+		<mr>30</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Aether Wisp">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>30</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>.05</ms><!--Percentage increase--></item>
+	<item name="Bami's Cinder">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>200</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Bilgewater Cutlass">
+		<ad>25</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>.1</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Bramble Vest">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>35</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Catalyst of Aeons">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>225</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>300</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Caulfield's Warhammer">
+		<ad>25</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>.1</cdr>
+		<ms>0</ms></item>
+	<item name="Chain Vest">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>40</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<!--Account for unique passive? UNIQUE – HARMONY: Gain +25% base health regeneration for every additional 25% base mana regeneration-->
+	<item name="Chalice of Harmony">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>30</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>.5</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Crystalline Bracer">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>200</hp>
+		<hp5>.5</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Executioner's Calling">
+		<ad>15</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Fiendish Codex">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>35</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>.1</cdr>
+		<ms>0</ms></item>
+	<!--Account for unique passive? UNIQUE: +10% cooldown reduction-->
+	<item name="Forbidden Idol">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>.5</mp5>
+		<cdr>.1</cdr>
+		<ms>0</ms></item>
+	<item name="Frostfang">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>70</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>15</ap>
+		<mp>0</mp>
+		<mp5>.75</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Giant's Belt">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>380</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<!--Account for unique passive? UNIQUE: +10% cooldown reduction-->
+	<item name="Glacial Shroud">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>20</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>250</mp>
+		<mp5>0</mp5>
+		<cdr>.1</cdr>
+		<ms>0</ms></item>
+	<item name="Harrowing Crescent">
+		<ad>10</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>60</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>.5</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Haunting Guise">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>200</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>35</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<!--Viktor's item; scales with level; 3AP/15MP per level; ie. 54AP/270MP at level 18-->
+	<item name="Hex Core mk-1">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>3</ap>
+		<mp>15</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<!--Viktor's item; scales with level; 6AP/20MP per level; ie. 108AP/360MP at level 18-->
+	<item name="Hex Core mk-2">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>6</ap>
+		<mp>20</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Hexdrinker">
+		<ad>20</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>35</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Hextech Revolver">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>40</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Jaurim's Fist">
+		<ad>15</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>200</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Jaurim's Fist (Max)">
+		<ad>15</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>300</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<!--Account for unique passive? UNIQUE: +10% cooldown reduction-->
+	<item name="Kindlegem">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>200</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>.1</cdr>
+		<ms>0</ms></item>
+	<item name="Kircheis Shard">
+		<ad>0</ad>
+		<as>.15</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Last Whisper">
+		<ad>20</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<!--Account for unique passive? UNIQUE – HASTE: Grants an additional 10% cooldown reduction-->
+	<item name="Lost Chapter">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>40</ap>
+		<mp>300</mp>
+		<mp5>0</mp5>
+		<cdr>.1</cdr>
+		<ms>0</ms></item>
+	<item name="Negatron Cloak">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>40</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Oblivion Orb">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>200</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>20</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Phage">
+		<ad>15</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>200</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Quicksilver Sash">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>30</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Recurve Bow">
+		<ad>0</ad>
+		<as>.25</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Runesteel Spaulders">
+		<ad>6</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>100</hp>
+		<hp5>.5</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Seeker's Armguard">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>30</arm>
+		<mr>0</mr>
+		<ap>20</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Seeker's Armguard (Max)">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>45</arm>
+		<mr>0</mr>
+		<ap>35</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Serrated Dirk">
+		<ad>30</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Sheen">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>250</mp>
+		<mp5>0</mp5>
+		<cdr>.1</cdr>
+		<ms>0</ms></item>
+	<item name="Spectre's Cowl">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>250</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>25</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<!--Account for unique passive? UNIQUE: +10% cooldown reduction-->
+	<item name="Stinger">
+		<ad>0</ad>
+		<as>.35</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>.1</cdr>
+		<ms>0</ms></item>
+	<item name="Targon's Buckler">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>100</hp>
+		<hp5>.5</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>10</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Tear of the Goddess">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>250</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Tear of the Goddess (Max)">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>1000</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Tiamat">
+		<ad>25</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>.5</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Vampiric Scepter">
+		<ad>15</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>.1</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Warden's Mail">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>40</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<!--Account for unique passive? UNIQUE: +7% movement speed-->
+	<item name="Zeal">
+		<ad>0</ad>
+		<as>.12</as>
+		<cr>.25</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>.07</ms><!--Percentage increase--></item>
+	<!--End advanced items-->
+	<!--Begin finished items-->
+	<item name="Abyssal Mask">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>350</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>55</mr>
+		<ap>0</ap>
+		<mp>300</mp>
+		<mp5>0</mp5>
+		<cdr>.1</cdr>
+		<ms>0</ms></item>
+	<item name="Adaptive Helm">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>350</hp>
+		<hp5>1.0</hp5><!--100 percentage increase, NOT 1 flat HP5-->
+		<arm>0</arm>
+		<mr>55</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>.1</cdr>
+		<ms>0</ms></item>
+	<!--Account for unique passive? UNIQUE – HASTE: Grants an additional 10% cooldown reduction. UNIQUE – AWE: Grants bonus ability power equal to 1% maximum mana-->
+	<item name="Archangel's Staff">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>50</ap>
+		<mp>650</mp>
+		<mp5>0</mp5>
+		<cdr>.2</cdr>
+		<ms>0</ms></item>
+	<item name="Ardent Censer">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>60</ap>
+		<mp>0</mp>
+		<mp5>.5</mp5>
+		<cdr>.1</cdr>
+		<ms>.08</ms><!--Percentage increase--></item>
+	<!--Account for unique passive? UNIQUE – DISSONANCE: Gain +5 ability power for every additional 25% base mana regeneration. Disables HARMONY on your other items-->
+	<item name="Athene's Unholy Grail">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>30</mr>
+		<ap>30</ap>
+		<mp>0</mp>
+		<mp5>1.0</mp5><!--100 percentage increase, NOT 1 flat MP5-->
+		<cdr>.1</cdr>
+		<ms>0</ms></item>
+	<item name="Banshee's Veil">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>60</mr>
+		<ap>75</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>.1</cdr>
+		<ms>0</ms></item>
+	<item name="Berserker's Greaves">
+		<ad>0</ad>
+		<as>.35</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>45</ms></item>
+	<item name="Black Cleaver">
+		<ad>40</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>400</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>.2</cdr>
+		<ms>0</ms></item>
+	<item name="Black Mist Scythe">
+		<ad>25</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>100</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>1.0</mp5><!--100 percentage increase, NOT 1 flat MP5-->
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Blade of the Ruined King">
+		<ad>40</ad>
+		<as>.25</as>
+		<cr>0</cr>
+		<ls>.12</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Bloodrazor">
+		<ad>0</ad>
+		<as>.5</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<!--Account for unique passive? UNIQUE: +20% life steal-->
+	<item name="Bloodthirster">
+		<ad>80</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>.2</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<!--Account for unique passive? Increases to +115 flat movement speed when out-of-combat. Receiving damage, dealing damage or debuffing units will put you in-combat, disabling this passive for 5 seconds-->
+	<item name="Boots of Mobility">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>25</ms></item>
+	<item name="Boots of Swiftness">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>60</ms></item>
+	<item name="Bulwark of the Mountain">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>300</hp>
+		<hp5>1.0</hp5><!--100 percentage increase, NOT 1 flat HP5-->
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>25</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<!--Account for passive? Increases health by 15% bonus health-->
+	<item name="Cinderhulk">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>300</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Circlet of the Iron Solari">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>45</arm>
+		<mr>75</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Dead Man's Plate">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>425</hp>
+		<hp5>0</hp5>
+		<arm>60</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Death's Dance">
+		<ad>50</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>30</arm>
+		<mr>30</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>.1</cdr>
+		<ms>0</ms></item>
+	<item name="Duskblade of Draktharr">
+		<ad>60</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>.1</cdr>
+		<ms>0</ms></item>
+	<item name="Edge of Night">
+		<ad>55</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>325</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<!--Account for unique passive? UNIQUE: +20% cooldown reduction-->
+	<item name="Essence Reaver">
+		<ad>70</ad>
+		<as>0</as>
+		<cr>.25</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>.2</cdr>
+		<ms>0</ms></item>
+	<item name="Forgefire Cape">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>750</hp>
+		<hp5>0</hp5>
+		<arm>100</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Frozen Fist">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>125</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>700</mp>
+		<mp5>0</mp5>
+		<cdr>.2</cdr>
+		<ms>0</ms></item>
+	<item name="Frozen Heart">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>110</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>400</mp>
+		<mp5>0</mp5>
+		<cdr>.2</cdr>
+		<ms>0</ms></item>
+	<item name="Frozen Mallet">
+		<ad>30</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>700</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Gargoyle Stoneplate">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>40</arm>
+		<mr>40</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Guardian Angel">
+		<ad>45</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>40</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Guinsoo's Rageblade">
+		<ad>25</ad>
+		<as>.25</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>25</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<!--Account for unique passive? UNIQUE – HASTE: Grants an additional 10% cooldown reduction-->
+	<item name="Hextech GLP-800">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>80</ap>
+		<mp>600</mp>
+		<mp5>0</mp5>
+		<cdr>.2</cdr>
+		<ms>0</ms></item>
+	<item name="Hextech Gunblade">
+		<ad>40</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>80</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Hextech Protobelt-01">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>300</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>60</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>.1</cdr>
+		<ms>0</ms></item>
+	<item name="Iceborn Gauntlet">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>65</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>500</mp>
+		<mp5>0</mp5>
+		<cdr>.2</cdr>
+		<ms>0</ms></item>
+	<item name="Infernal Mask">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>750</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>100</mr>
+		<ap>0</ap>
+		<mp>300</mp>
+		<mp5>0</mp5>
+		<cdr>.1</cdr>
+		<ms>0</ms></item>
+	<item name="Infinity Edge">
+		<ad>80</ad>
+		<as>0</as>
+		<cr>.25</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<!--Account for unique passive? UNIQUE: +10% cooldown reduction-->
+	<item name="Ionian Boots of Lucidity">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>.1</cdr>
+		<ms>45</ms></item>
+	<item name="Knight's Vow">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>250</hp>
+		<hp5>0</hp5>
+		<arm>40</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>.1</cdr>
+		<ms>0</ms></item>
+	<item name="Liandry's Torment">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>300</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>75</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Lich Bane">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>80</ap>
+		<mp>250</mp>
+		<mp5>0</mp5>
+		<cdr>.1</cdr>
+		<ms>.07</ms><!--Percentage increase--></item>
+	<item name="Locket of the Iron Solari">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>30</arm>
+		<mr>60</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Lord Dominik's Regards">
+		<ad>45</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<!--Account for unique passive? UNIQUE – HASTE: Grants an additional 10% cooldown reduction-->
+	<item name="Luden's Echo">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>90</ap>
+		<mp>600</mp>
+		<mp5>0</mp5>
+		<cdr>.2</cdr>
+		<ms>0</ms></item>
+	<!--Account for unique passive? UNIQUE – HASTE: Grants an additional 10% cooldown reduction-->
+	<item name="Luden's Pulse">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>120</ap>
+		<mp>850</mp>
+		<mp5>0</mp5>
+		<cdr>.2</cdr>
+		<ms>0</ms></item>
+	<!--Account for unique passive? UNIQUE – AWE: Grants bonus attack damage equal to 2% maximum mana-->
+	<item name="Manamune">
+		<ad>35</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>250</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Maw of Malmortius">
+		<ad>50</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>50</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>.1</cdr>
+		<ms>0</ms></item>
+	<item name="Mejai's Soulstealer">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>20</ap>
+		<mp>200</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Mejai's Soulstealer (Max)">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>145</ap>
+		<mp>200</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>.1</ms><!--Percentage increase--></item>
+	<item name="Mercurial Scimitar">
+		<ad>50</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>.1</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>35</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Mercury's Treads">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>25</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>45</ms></item>
+	<item name="Might of the Ruined King">
+		<ad>55</ad>
+		<as>.4</as>
+		<cr>0</cr>
+		<ls>.12</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<!--Account for unique passive? UNIQUE – HARMONY: Gain +25% base health regeneration for every additional 25% base mana regeneration-->
+	<item name="Mikael's Crucible">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>40</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>1.0</mp5><!--100 percentage increase, NOT 1 flat MP5-->
+		<cdr>.1</cdr>
+		<ms>0</ms></item>
+	<item name="Molten Edge">
+		<ad>110</ad>
+		<as>0</as>
+		<cr>.25</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Morellonomicon">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>300</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>70</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Mortal Reminder">
+		<ad>45</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<!--Account for unique passive? UNIQUE – AWE: Grants bonus attack damage equal to 2% maximum mana-->
+	<item name="Muramana">
+		<ad>35</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>1000</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<!--Account for unique passive? UNIQUE: +20% cooldown reduction-->
+	<item name="Nashor's Tooth">
+		<ad>0</ad>
+		<as>.5</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>80</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>.2</cdr>
+		<ms>0</ms></item>
+	<item name="Ninja Tabi">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>20</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>45</ms></item>
+	<item name="Obsidian Cleaver">
+		<ad>60</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>550</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>.2</cdr>
+		<ms>0</ms></item>
+	<item name="Pauldrons of Whiterock">
+		<ad>15</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>300</hp>
+		<hp5>1.0</hp5><!--100 percentage increase, NOT 1 flat HP5-->
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<!--Viktor's item; scales with level; 10AP/25MP per level; ie. 180AP/450MP at level 18-->
+	<item name="Perfect Hex Core">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>10</ap>
+		<mp>25</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Phantom Dancer">
+		<ad>0</ad>
+		<as>.3</as>
+		<cr>.25</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>.07<ms><!--Percentage increase--></item>
+	<!--Account for unique passive? UNIQUE: +40% ability power-->
+	<item name="Rabadon's Deathcap">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>120</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<!--Account for unique passive? UNIQUE: +40% ability power-->
+	<item name="Rabadon's Deathcrown">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>175</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Randuin's Omen">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>400</hp>
+		<hp5>0</hp5>
+		<arm>70</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Rapid Firecannon">
+		<ad>0</ad>
+		<as>.3</as>
+		<cr>.25</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>.07</ms><!--Percentage increase--></item>
+	<item name="Ravenous Hydra">
+		<ad>80</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>.18</ls>
+		<hp>0</hp>
+		<hp5>1.0</hp5><!--100 percentage increase, NOT 1 flat HP5-->
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Redemption">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>200</hp>
+		<hp5>.5</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>1.5</mp5><!--150 percentage increase, NOT 1.5 flat MP5-->
+		<cdr>.1</cdr>
+		<ms>0</ms></item>
+	<item name="Righteous Glory">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>400</hp>
+		<hp5>1.0</hp5><!--100 percentage increase, NOT 1 flat HP5-->
+		<arm>30</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>300</mp>
+		<mp5>0</mp5>
+		<cdr>.1</cdr>
+		<ms>0</ms></item>
+	<item name="Rod of Ages">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>300</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>60</ap>
+		<mp>300</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Rod of Ages (Max)">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>500</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>100</ap>
+		<mp>400</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Runaan's Hurricane">
+		<ad>0</ad>
+		<as>.4</as>
+		<cr>.25</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>.09</ms><!--Percentage increase--></item>
+	<item name="Runic Echoes">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>80</ap>
+		<mp>300</mp>
+		<mp5>0</mp5>
+		<cdr>.1</cdr>
+		<ms>0</ms></item>
+	<item name="Rylai's Crystal Scepter">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>300</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>90</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Salvation">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>300</hp>
+		<hp5>1.5</hp5><!--150 percentage increase, NOT 1.5 flat HP5-->
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>2.0</mp5><!--200 percentage increase, NOT 2 flat MP5-->
+		<cdr>.1</cdr>
+		<ms>0</ms></item>
+	<item name="Sanguine Blade">
+		<ad>55</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>.15</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<!--Account for unique passive? UNIQUE – HASTE: Grants an additional 10% cooldown reduction. UNIQUE – AWE: Grants bonus ability power equal to 3% maximum mana-->
+	<item name="Seraph's Embrace">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>50</ap>
+		<mp>1400</mp>
+		<mp5>0</mp5>
+		<cdr>.2</cdr>
+		<ms>0</ms></item>
+	<item name="Shard of True Ice">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>100</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>50</ap>
+		<mp>0</mp>
+		<mp5>1.0</mp5><!--100 percentage increase, NOT 1 flat MP5-->
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Shurelya's Reverie">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>300</hp>
+		<hp5>1.0</hp5><!--100 percentage increase, NOT 1 flat HP5-->
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>1.0</mp5><!--100 percentage increase, NOT 1 flat MP5-->
+		<cdr>.1</cdr>
+		<ms>0</ms></item>
+	<item name="Sorcerer's Shoes">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>45</ms></item>
+	<item name="Spellbinder">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>120</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>.1</ms><!--Percentage increase--></item>
+	<!--Account for unique passive? UNIQUE: Increases all healing received by 30% (including health regeneration, life steal and spell vamp)-->
+	<item name="Spirit Visage">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>450</hp>
+		<hp5>1.0</hp5><!--100 percentage increase, NOT 1 flat HP5-->
+		<arm>0</arm>
+		<mr>55</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>.1</cdr>
+		<ms>0</ms></item>
+	<item name="Statikk Shiv">
+		<ad>0</ad>
+		<as>.4</as>
+		<cr>.25</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>.07</ms></item>
+	<!--Account for unique passive? UNIQUE – GIANT STRENGTH: Gain 50% of base attack damage as bonus attack damage-->
+	<item name="Sterak's Gage">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>450</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Stormrazor">
+		<ad>50</ad>
+		<as>.15</as>
+		<cr>.25</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Sunfire Cape">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>425</hp>
+		<hp5>0</hp5>
+		<arm>60</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Thornmail">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>250</hp>
+		<hp5>0</hp5>
+		<arm>80</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Titanic Hydra">
+		<ad>40</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>450</hp>
+		<hp5>1.0</hp5><!--100 percentage increase, NOT 1 flat HP5-->
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<item name="Trinity Force">
+		<ad>25</ad>
+		<as>.4</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>250</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>250</mp>
+		<mp5>0</mp5>
+		<cdr>.2</cdr>
+		<ms>.05</ms><!--Percentage increase--></item>
+	<item name="Trinity Fusion">
+		<ad>35</ad>
+		<as>.5</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>350</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>350</mp>
+		<mp5>0</mp5>
+		<cdr>.2</cdr>
+		<ms>.08</ms><!--Percentage increase--></item>
+	<item name="Twin Shadows">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>70</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>.1</cdr>
+		<ms>.07</ms><!--Percentage increase--></item>
+	<item name="Umbral Glaive">
+		<ad>50</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>.1</cdr>
+		<ms>0</ms></item>
+	<item name="Void Staff">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>70</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0</ms></item>
+	<!--Account for unique passive? UNIQUE: +10% cooldown reduction-->
+	<item name="Warmog's Armor">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>800</hp>
+		<hp5>2.0</hp5><!--200 percentage increase, NOT 2 flat HP5-->
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>.1</cdr>
+		<ms>0</ms></item>
+	<item name="Warrior">
+		<ad>60</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>.1</cdr>
+		<ms>0</ms></item>
+	<item name="Wit's End">
+		<ad>0</ad>
+		<as>.5</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>50</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>0</cdr>
+		<ms>0.05</ms><!--Percentage increase--></item>
+	<item name="Youmuu's Ghostblade">
+		<ad>55</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>.1</cdr>
+		<ms>0</ms></item>
+	<item name="Youmuu's Wraithblade">
+		<ad>75</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>0</arm>
+		<mr>0</mr>
+		<ap>0</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>.1</cdr>
+		<ms>0</ms></item>
+	<item name="Zeke's Convergence">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>60</arm>
+		<mr>30</mr>
+		<ap>0</ap>
+		<mp>250</mp>
+		<mp5>0</mp5>
+		<cdr>.1</cdr>
+		<ms>0</ms></item>
+	<item name="Zhonya's Hourglass">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>45</arm>
+		<mr>0</mr>
+		<ap>75</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>.1</cdr>
+		<ms>0</ms></item>
+	<item name="Zhonya's Paradox">
+		<ad>0</ad>
+		<as>0</as>
+		<cr>0</cr>
+		<ls>0</ls>
+		<hp>0</hp>
+		<hp5>0</hp5>
+		<arm>60</arm>
+		<mr>0</mr>
+		<ap>100</ap>
+		<mp>0</mp>
+		<mp5>0</mp5>
+		<cdr>.1</cdr>
+		<ms>0</ms></item>
+	<!--End finished items-->
+</items>
