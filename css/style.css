@@ -37,6 +37,9 @@ body {
    display: inline-block;
    
 }
+.custom-class {
+	width: 250px;
+}	
 
 .offcanvas #page {
   overflow: hidden;
